@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DAC2AAF1BC6001400820BFB /* SXEasyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXEasyMacro.h; sourceTree = "<group>"; };
 		1DB3959D1BC376E3000E9C3E /* SXEasyMacroDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXEasyMacroDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB395A11BC376E3000E9C3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DB395A31BC376E3000E9C3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 				1DB395A41BC376E3000E9C3E /* AppDelegate.m */,
 				1DB395A61BC376E3000E9C3E /* ViewController.h */,
 				1DB395A71BC376E3000E9C3E /* ViewController.m */,
+				1DAC2AAF1BC6001400820BFB /* SXEasyMacro.h */,
 				1DB395A91BC376E3000E9C3E /* Main.storyboard */,
 				1DB395AC1BC376E3000E9C3E /* Assets.xcassets */,
 				1DB395AE1BC376E3000E9C3E /* LaunchScreen.storyboard */,
@@ -300,6 +302,7 @@
 				1DB395B61BC376E3000E9C3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
