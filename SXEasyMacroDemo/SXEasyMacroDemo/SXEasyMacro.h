@@ -16,8 +16,9 @@
 #define SXBoldFont(x) [UIFont boldSystemFontOfSize:x]
 
 /** 颜色*/
-#define SXRGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define SXRGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define SXRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define SXRGBAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define SXRGB16Color(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 /** 输出*/
 #ifdef DEBUG
@@ -42,7 +43,8 @@
 #define SXiPhone6_OR_6s   (SXSCREEN_H == 667)
 #define SXiPhone6Plus_OR_6sPlus   (SXSCREEN_H == 736)
 
-
+/** 弱指针*/
+#define SXWeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self;
 
 
 #endif /* SXEasyMacro_h */
