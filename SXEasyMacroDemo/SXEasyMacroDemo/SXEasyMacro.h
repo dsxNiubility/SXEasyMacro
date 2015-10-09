@@ -46,5 +46,10 @@
 /** 弱指针*/
 #define SXWeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self;
 
+/** 加载本地文件*/
+#define SXLoadImage(file,type) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
+#define SXLoadArray(file,type) [UIImage arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
+#define SXLoadDict(file,type) [UIImage dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
+
 
 #endif /* SXEasyMacro_h */

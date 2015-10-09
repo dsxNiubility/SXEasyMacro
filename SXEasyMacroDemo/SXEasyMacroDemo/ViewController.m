@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]];
+//    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:nil ofType:nil]];
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[NSBundle mainBundle]]
     
     // Do any additional setup after loading the view, typically from a nib.
 }
