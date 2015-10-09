@@ -27,9 +27,12 @@
 #define SXLog(...)
 #endif
 
-/** 硬件*/
+/** 获取硬件信息*/
 #define SXSCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SXSCREEN_H [UIScreen mainScreen].bounds.size.height
+#define SXCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+#define SXCurrentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
 
 /** 适配*/
 #define SXiOS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
@@ -42,6 +45,7 @@
 #define SXiPhone5_OR_5c_OR_5s   (SXSCREEN_H == 568)
 #define SXiPhone6_OR_6s   (SXSCREEN_H == 667)
 #define SXiPhone6Plus_OR_6sPlus   (SXSCREEN_H == 736)
+#define SXiPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 /** 弱指针*/
 #define SXWeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self;
@@ -50,6 +54,9 @@
 #define SXLoadImage(file,type) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 #define SXLoadArray(file,type) [UIImage arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 #define SXLoadDict(file,type) [UIImage dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
+
+/** 数据存储*/
+#define SXUserDefaults [NSUserDefaults standardUserDefaults]
 
 
 #endif /* SXEasyMacro_h */
