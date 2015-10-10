@@ -61,6 +61,10 @@
 
 /** 数据存储*/
 #define SXUserDefaults [NSUserDefaults standardUserDefaults]
+#define SXCacheDir [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+#define SXDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define SXTempDir NSTemporaryDirectory()
+
 
 
 #endif /* SXEasyMacro_h */
