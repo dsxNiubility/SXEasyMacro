@@ -55,6 +55,10 @@
 #define SXLoadArray(file,type) [UIImage arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 #define SXLoadDict(file,type) [UIImage dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 
+/** 多线程GCD*/
+#define SXGlobalGCD(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define SXMainGCD(block) dispatch_async(dispatch_get_main_queue(),block)
+
 /** 数据存储*/
 #define SXUserDefaults [NSUserDefaults standardUserDefaults]
 
