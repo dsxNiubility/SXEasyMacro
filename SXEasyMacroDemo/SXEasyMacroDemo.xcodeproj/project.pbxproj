@@ -27,6 +27,7 @@
 		1DB395AC1BC376E3000E9C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DB395AF1BC376E3000E9C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DB395B11BC376E3000E9C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE0E76E1BD2833200B807F4 /* SXEasyConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXEasyConstant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				1DAC2B0B1BC8B12600820BFB /* SXEasyMacro.h */,
+				1DE0E76E1BD2833200B807F4 /* SXEasyConstant.h */,
 			);
 			name = SXEasyMacro;
 			path = ../../SXEasyMacro;
