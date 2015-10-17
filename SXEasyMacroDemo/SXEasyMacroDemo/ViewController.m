@@ -18,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+//    SXLog(@"class==>%@, method==>%s, line==>%d",[self class],__FUNCTION__,__LINE__);
+//    SXLog(@"%s",__FUNCTION__);
+//    SXLog(@"%d",__LINE__);
+//    SXLog(@"%s",__FILE__);
+//    SXLog(@"%@",[NSThread callStackSymbols]);
+//    SXLog(@"%@",[self class]);
 //    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]];
 //    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:nil ofType:nil]];
 //    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[NSBundle mainBundle]]

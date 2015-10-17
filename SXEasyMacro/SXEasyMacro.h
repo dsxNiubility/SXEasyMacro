@@ -27,6 +27,14 @@
 #define SXLog(...)
 #endif
 
+#define SXPrint_CurrentMethod SXLog(@"%s",__FUNCTION__);
+#define SXPrint_CurrentLine SXLog(@"%d",__LINE__);
+#define SXPrint_CurrentClass SXLog(@"%s",__FILE__);
+#define SXPrint_CurrentStack SXLog(@"%@",[NSThread callStackSymbols]);
+#define SXPrint_CurrentPath SXLog(@"%s",__FILE__);
+#define SXPrint_CurrentDetail SXLog(@"class==>%@, method==>%s, line==>%d",[self class],__FUNCTION__,__LINE__);
+
+
 /** 获取硬件信息*/
 #define SXSCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SXSCREEN_H [UIScreen mainScreen].bounds.size.height
