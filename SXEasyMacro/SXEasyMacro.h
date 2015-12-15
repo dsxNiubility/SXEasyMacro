@@ -68,10 +68,10 @@
 #define SXMainGCD(block) dispatch_async(dispatch_get_main_queue(),block)
 
 /** 数据存储*/
-#define SXUserDefaults [NSUserDefaults standardUserDefaults]
-#define SXCacheDir [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
-#define SXDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
-#define SXTempDir NSTemporaryDirectory()
+#define kSXUserDefaults [NSUserDefaults standardUserDefaults]
+#define kSXCacheDir [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+#define kSXDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define kSXTempDir NSTemporaryDirectory()
 
 
 
