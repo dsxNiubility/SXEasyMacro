@@ -73,6 +73,7 @@
 #define kSXDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define kSXTempDir NSTemporaryDirectory()
 
-
+/** 非空block，把block和参数都写好，如果block不为空才执行*/
+#define SXNotNilBlock(block, ...) if (block) { block(__VA_ARGS__); };
 
 #endif /* SXEasyMacro_h */
