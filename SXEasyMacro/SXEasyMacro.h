@@ -76,4 +76,7 @@
 /** 非空block，把block和参数都写好，如果block不为空才执行*/
 #define SXNotNilBlock(block, ...) if (block) { block(__VA_ARGS__); };
 
+/** 快速进入一个bundle的宏*/
+#define SXBundle(bundleName) [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:(bundleName) withExtension:@"bundle"]]
+
 #endif /* SXEasyMacro_h */
