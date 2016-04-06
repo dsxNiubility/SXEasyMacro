@@ -79,4 +79,12 @@
 /** 快速进入一个bundle的宏*/
 #define SXBundle(bundleName) [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:(bundleName) withExtension:@"bundle"]]
 
+/** 获取相机权限状态（一般是直接用下面两个 拒绝或同意）*/
+#define SXCameraStatus [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo]
+#define SXCameraDenyed ((SXCameraStatus == AVAuthorizationStatusRestricted)||(SXCameraStatus == AVAuthorizationStatusDenied))
+#define SXCameraAllowed (!SXCameraDenyed)
+
+/** 直接跳到系统内本App的设置页面*/
+#define SXGoToApplicationSettingPage [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+
 #endif /* SXEasyMacro_h */
