@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "SXEasyMacro.h"
-
 @interface ViewController ()
 
 @end
@@ -28,7 +27,7 @@
 //    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]];
 //    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:nil ofType:nil]];
 //    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[NSBundle mainBundle]]
-    
+    SXLoadBundleImg(@"ptkit", @"cy");
     // Do any additional setup after loading the view, typically from a nib.
 }
 

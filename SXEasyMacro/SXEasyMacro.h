@@ -63,6 +63,16 @@
 #define SXLoadArray(file,type) [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 #define SXLoadDict(file,type) [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:type]]
 
+/** 快速进入一个bundle的宏*/
+#define SXBundle(bundleName) [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:(bundleName) withExtension:@"bundle"]]
+/** 加载bundle内nib或图片*/
+// 这里返回的是一个nib内的元素
+#define SXLoadBundleNib(bundleName,nibName,index) [SXBundle(bundleName) loadNibNamed:(nibName) owner:nil options:nil][(index)];
+// 这里返回的是包装后的图片名
+#define SXBundleImgName(bundleName,iconName) (iconName)?[[NSString stringWithFormat:@"%@.bundle/",((bundleName))] stringByAppendingString:(iconName)]:(iconName)
+
+
+
 /** 多线程GCD*/
 #define SXGlobalGCD(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
 #define SXMainGCD(block) dispatch_async(dispatch_get_main_queue(),block)
@@ -75,9 +85,6 @@
 
 /** 非空block，把block和参数都写好，如果block不为空才执行*/
 #define SXNotNilBlock(block, ...) if (block) { block(__VA_ARGS__); };
-
-/** 快速进入一个bundle的宏*/
-#define SXBundle(bundleName) [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:(bundleName) withExtension:@"bundle"]]
 
 /** 获取相机权限状态（一般是直接用下面两个 拒绝或同意）*/
 #define SXCameraStatus [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo]
