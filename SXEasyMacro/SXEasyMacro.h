@@ -71,7 +71,9 @@
 // 这里返回的是包装后的图片名
 #define SXBundleImgName(bundleName,iconName) (iconName)?[[NSString stringWithFormat:@"%@.bundle/",((bundleName))] stringByAppendingString:(iconName)]:(iconName)
 
-
+/** 裁切图片的宏*/
+#define MTBStretchImg(image) [(image) stretchableImageWithLeftCapWidth:(image.size.width/3.0) topCapHeight:image.size.height/3.0]?:[UIImage new]
+#define MTBStretchImgCustom(image,w,h) [(image) stretchableImageWithLeftCapWidth:(image.size.width*(w)) topCapHeight:image.size.height*(h)]?:[UIImage new]
 
 /** 多线程GCD*/
 #define SXGlobalGCD(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
